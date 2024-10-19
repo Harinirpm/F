@@ -90,7 +90,7 @@ function VerticalNav() {
 
       <List
         sx={{
-          backgroundColor: "#0a3e66", //vericalNav background color value...
+          backgroundColor: "#0a3e66", 
           color: "white",
           padding: "6px",
         }}

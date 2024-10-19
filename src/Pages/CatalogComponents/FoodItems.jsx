@@ -2,7 +2,6 @@ import React from 'react';
 import { Card, CardMedia, CardContent, Typography, IconButton, CardActionArea } from '@mui/material';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid'
-// import InfoIcon from '@mui/icons-material/Info';
 import { IoIosInformationCircleOutline } from "react-icons/io";
 import { useNavigate } from 'react-router-dom';
 
@@ -65,8 +64,6 @@ function FoodItems() {
       id: 9,
     },
   ];
-
-  // Handle card click to navigate to the details page
   const handleCardClick = (id) => {
     navigate(`/item-details/${id}`);
   };
@@ -91,7 +88,6 @@ function FoodItems() {
                 },
               }}
             >
-              {/* Making the entire card clickable */}
               <CardActionArea onClick={() => handleCardClick(item.id)}>
                 <CardMedia
                   component="img"

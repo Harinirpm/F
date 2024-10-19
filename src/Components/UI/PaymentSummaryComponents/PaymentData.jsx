@@ -5,7 +5,6 @@ function PaymentData({ items = [], grandTotal }) {
   return (
     <Box>
       <Box sx={{ marginBottom: "10px" }}>
-        {/* Conditional Rendering for Items */}
         {items.length > 0 ? (
           items.map((item, index) => (  //condition true
             <Box

@@ -7,8 +7,6 @@ const StyledIconButton = styled(IconButton)(({ bgcolor, textcolor }) => ({
   backgroundColor: bgcolor || "transparent",
   color: textcolor || "black",
   padding: "10px",
-  // height:"60px",
-  // width:"60px",
   borderRadius: "9px",
   "&:hover": {
     backgroundColor: textcolor || "lightgray",

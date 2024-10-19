@@ -29,7 +29,6 @@ function AddToCart() {
     { text: "  Coupon", icon: LocalOfferIcon, variant: "outlined" },
     { text: "Discount", icon: DiscountIcon, variant: "outlined" },
   ];
-  // const total = `SAR ${grandTotal.toFixed(2)}`;
 
   return (
     <Box>
@@ -63,7 +62,6 @@ function AddToCart() {
       {/* < Payment /> */}
       <PaymentData items={paymentDetails} grandTotal={grandTotal.toFixed(2)} />
 
-      {/*bottom buttons of payment summary*/}
       <Box
         sx={{
           display: "flex",
@@ -98,10 +96,6 @@ function AddToCart() {
         </Button>
         <Divider sx={{ my: 1, width: "100%" }} />
       </Box>
-
-      {/* Action Buttons */}
-      {/*adding payment buttons*/}
-
       <Box
         sx={{
           display: "grid",
@@ -133,8 +127,6 @@ function AddToCart() {
         ))}
       </Box>
       <Divider sx={{ my: 1, width: "100%", mb: "30px" }} />
-
-      {/* Print and Proceed buttons */}
       <Box sx={{ display: "flex", justifyContent: "space-between" }}>
         <Button
           variant="outlined"

@@ -124,10 +124,10 @@ const itemData = [
 ];
 
 function ItemDetails() {
-  const { id } = useParams(); // This gets the dynamic id from the route
+  const { id } = useParams();
   const item = itemData.find((i) => i.id === parseInt(id));
 
-  const [selectedVariant, setSelectedVariant] = useState(item?.variants[0]); // Default to the first variant
+  const [selectedVariant, setSelectedVariant] = useState(item?.variants[0]); 
   const [quantity, setQuantity] = useState(1);
 
   if (!item) {
@@ -140,7 +140,7 @@ function ItemDetails() {
   };
 
   const handleQuantityChange = (change) => {
-    setQuantity((prev) => Math.max(1, prev + change)); // Ensure quantity doesn't go below 1
+    setQuantity((prev) => Math.max(1, prev + change)); 
   };
 
   const navigate = useNavigate();
@@ -188,7 +188,6 @@ function ItemDetails() {
               top: "10px",
               left: "10px",
               transform: "translate(0, 0)",
-              //   fontSize:"70px"
             }}
           />
           <IconButton
@@ -218,9 +217,6 @@ function ItemDetails() {
         <Typography variant="h6" sx={{ mt: "20px", mb: "20px" }}>
           Quantity
         </Typography>
-
-
-{/*Quantity details display */}
         <RadioGroup
           value={selectedVariant.label}
           onChange={handleVariantChange}
@@ -229,8 +225,6 @@ function ItemDetails() {
             <TableBody>
               {item.variants.map((variant, index) => (
                 <React.Fragment key={variant.label}>
-                  {/* {" "} */}
-                  {/* Use unique key for Fragment */}
                   <TableRow sx={{ border: "none" }}>
                     <TableCell sx={{ border: "none", padding: "10px 0" }}>
                       <FormControlLabel
@@ -262,7 +256,7 @@ function ItemDetails() {
                           color:
                             selectedVariant.label === variant.label
                               ? "#007bff"
-                              : "#000", // Change color conditionally
+                              : "#000",
                         }}
                       >
                         SAR {variant.price}
@@ -336,8 +330,6 @@ function ItemDetails() {
               <Add />
             </IconButton>
           </Box>
-
-          {/* Add to Order Button */}
           <CustomButton
             variant="contained"
             text="Add to Cart"

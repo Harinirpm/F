@@ -3,18 +3,15 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import CustomIcon from "../Components/UI/Icon";
 import MenuBookIcon from "@mui/icons-material/MenuBook";
-
 import Searchbar from "../Components/UI/Searchbar";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import TableRestaurantIcon from "@mui/icons-material/TableRestaurant";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 import { useLocation } from "react-router-dom";
-
 import Table from "../Components/UI/CartSummaryComponents/Table";
-// import { Navigate } from "react-router-dom";
 
 function CartSummary() {
-  // const [isMenuActive, setIsMenuActive] = useState(false);
+
 
   const iconData = [
     {
@@ -37,16 +34,7 @@ function CartSummary() {
     },
   ];
 
-  // const navigate = useNavigate();
   const location = useLocation();
-
-  // const handleClick = () => {
-  //   navigate('/Catalog')
-  // };
-
-  // const handleMenuClick = () => {
-  //   navigate("/Catalog"); // Navigate to the Catalog page
-  // };
 
   return (
     <Box flex={10} sx={{ padding: 0 }} spacing={10}>
@@ -61,7 +49,6 @@ function CartSummary() {
           >
             <CustomIcon
               icon={MenuBookIcon}
-              // onClick={handleMenuClick}
               textcolor="blue"
               route="/Catalog"
               sx={{

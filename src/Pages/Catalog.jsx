@@ -21,8 +21,6 @@ function Catalog() {
     { text: "Sandwich", variant: "outlined", isActive: false },
     { text: "Juice", variant: "outlined", isActive: false },
   ];
-
-  // Function to handle active button state
   const handleButtonClick = (index) => {
     setActiveButton(index);
   };
@@ -100,35 +98,17 @@ function Catalog() {
           />
         </Box>
       </Box>
-
-      {/* Button Group Container with Horizontal Scroll */}
       <Box
         display="flex"
         flexDirection="row"
         sx={{
           marginTop: "20px",
           ml: "20px",
-          //   overflowX: "auto",                          // Allow horizontal scrolling
-          //   whiteSpace: "nowrap",                       // Prevent line breaks between buttons
-          //   scrollBehavior: "smooth",
-          //   paddingBottom: "20px",                       // Smooth scrolling when the scrollbar is dragged
-          //   "&::-webkit-scrollbar": {
-          //     height: "14px",                            // Reduced scrollbar height (thinner)
-          //     width: "100px",                            // Set the scrollbar width to 40px
-          //     backgroundColor: "white",                  // Background for scrollbar
-          //   },
-          //   "&::-webkit-scrollbar-thumb": {
-          //                                                 // Style scrollbar thumb
-          //     backgroundColor: "gray",                    // Scrollbar thumb color
-          //     borderRadius: "10px",
-          //     width: "10px",
-          // },
         }}
       >
-        {/* <Button variant="contained" sx={{mr:"20px"}}>All</Button> */}
         {buttonData.map((button, index) => (
           <Box key={index} sx={{ textAlign: "center" }}>
-            {/* Button */}
+           
             <Button
               onClick={() => handleButtonClick(index)}
               startIcon={button.icon}

@@ -22,11 +22,8 @@ function Payment() {
 
   const grandTotal = paymentDetails.reduce((total, item) => {
     const valueAsNumber = parseFloat(item.value.replace(/SAR|,/g, "").trim());
-    // console.log(`Item: ${item.label}, Value: ${item.value}, Parsed: ${valueAsNumber}`);
     return (total += valueAsNumber);
   }, 0);
-
-  // const grandTotal = `SAR ${(0.0).toFixed(2)}`; 
 
   const buttonData = [
     { text:"Customer" , icon: PersonIcon , variant: "outlined"  },
@@ -98,10 +95,6 @@ function Payment() {
           <Divider sx={{ my: 1, width:"100%",}} />
        
         </Box>
-
-        {/* Action Buttons */}
-        {/*adding payment buttons*/}
-        
         <Box
         sx={{
           display: "grid",
@@ -138,8 +131,6 @@ function Payment() {
         ))}
         </Box>
         <Divider sx={{ my: 1, width:"100%", mb:"10px"}} />
-
-        {/* Print and Proceed buttons */}
         <Box sx={{ display: "flex", justifyContent: "space-between",  mt:"30px"}}>
           <Button
             variant="outlined"

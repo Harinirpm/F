@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, IconButton, Typography, Box, Button } from '@mui/material';
+import { Table,TableCell,TableHead, TableRow,Box,} from '@mui/material';
 import TablEBodyContent from './TableBody'
 import EmptyScreen from '../EmptyScreen';
 import { useLocation } from 'react-router-dom';
@@ -17,7 +17,6 @@ const CartTable = () => {
 
   return (
     <Box>
-    {/* <TableContainer component={Paper}> */}
       <Table>
         <TableHead sx={{ boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.1)"}}>
           <TableRow sx={{border:"1px solid #dedede"}}>
@@ -33,7 +32,6 @@ const CartTable = () => {
         )}
 
       </Table>
-    {/* </TableContainer> */}
     {location.pathname !== '/add-to-cart' && (
 
     <EmptyScreen />
